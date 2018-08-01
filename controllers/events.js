@@ -1,7 +1,7 @@
 const Event = require('../models/event');
-const { sendSMS } = require('../lib/twilio');
-const moment = require('moment');
-const notifications = require('../lib/notifications');
+// const { sendSMS } = require('../lib/twilio');
+// const moment = require('moment');
+// const notifications = require('../lib/notifications');
 
 function indexRoute(req, res, next) {
   Event

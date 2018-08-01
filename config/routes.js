@@ -3,7 +3,7 @@ const events = require('../controllers/events');
 const auth = require('../controllers/auth');
 const users = require('../controllers/users');
 const secureRoute = require('../lib/secureRoute');
-const push = require('../controllers/pushNotifications');
+// const push = require('../controllers/pushNotifications');
 
 router.route('/events')
   .get(events.index)
@@ -31,6 +31,6 @@ router.route('/users/:id')
   .put(secureRoute, users.update);
 
 
-router.post('/subscribe', secureRoute, push.subscribe);
+// router.post('/subscribe', secureRoute, push.subscribe);
 
 module.exports = router;
