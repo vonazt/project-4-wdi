@@ -15,7 +15,7 @@ import ProtectedRoute from './components/common/ProtectedRoute';
 import FlashMessages from './components/common/FlashMessages';
 import EventsShow from './components/events/Show';
 import Konami from 'react-konami';
-import Push from './lib/Push';
+// import Push from './lib/Push';
 
 import 'bulma';
 import './scss/style.scss';
@@ -28,13 +28,13 @@ class App extends React.Component {
     pushRegistered: false
   };
 
-  componentDidMount = () => {
-    Push.initialize()
-      .then(res => {
-        console.log('REGISTERED', res);
-        this.setState({ pushRegistered: true });
-      });
-  }
+  // componentDidMount = () => {
+  //   Push.initialize()
+  //     .then(res => {
+  //       console.log('REGISTERED', res);
+  //       this.setState({ pushRegistered: true });
+  //     });
+  // }
 
   //currently works once per refresh. Find better method than remove();
   konami = () =>{
@@ -45,7 +45,7 @@ class App extends React.Component {
   }
 
   render() {
-    if(!this.state.pushRegistered) return <h1>Connecting...</h1>;
+    // if(!this.state.pushRegistered) return <h1>Connecting...</h1>;
     return (
       <BrowserRouter>
         <main>
