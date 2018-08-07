@@ -24,8 +24,8 @@ import './scss/style.scss';
 class App extends React.Component {
 
   state = {
-    easterEggActive: false,
-    pushRegistered: false
+    easterEggActive: false
+    // pushRegistered: false
   };
 
   // componentDidMount = () => {
